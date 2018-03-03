@@ -1,0 +1,254 @@
+// Variables
+$mo-black: #161616;
+$mo-white: #fff;
+$mo-velvet: #7144c5;
+$mo-green: #6de6a4;
+
+$font-super-light:200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+$primary-font:'Oswald', sans-serif;
+
+// Global Style 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: $primary-font;
+}
+a {
+    text-decoration: none;
+    color: $mo-white;
+}
+// Main Styles
+
+.main-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #2c3e50;
+}
+
+    .main-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+    
+        .content-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .main-logo {
+                width: 100%;
+                height: 20%;
+                background: darken(#2c3e50, 10%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .main-menu {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                nav {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-bottom: .5rem;
+                    }
+                }
+            }
+        }
+
+        .content-middle {
+            flex: 3;
+            background: url(https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=2134&q=80) center center / cover no-repeat;
+
+            .middle-content {
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                &-title {
+                    position: relative;
+                    left: -4rem;
+                    color: $mo-white;
+                    font: {
+                        size:10rem;
+                    }
+                }
+
+                &-description {
+                    width: 30%;
+                    position: relative;
+                    left: -4rem;
+                    color: $mo-white;
+                }
+            }
+
+            .middle-footer {
+                height: 10%;
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                right: 2rem;
+            }
+        }
+        
+        .content-right {
+            flex:2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .right-loader {
+                width: 2px;
+                height: 35%;
+                background: $mo-white;;
+                position: absolute;
+                left: 0;
+            }
+
+            .right-content {
+                height: 90%;
+                width: 80%;
+
+                .right-header {
+                    height: 20%;
+
+                    .right-header-content {
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .right-header-icon {
+                        width: 18px;
+                        height: 18px;
+                        background: $mo-white;
+                        order: 2;
+                        align-self: center;
+                    }
+
+                    .right-header-menu {
+                        align-self: flex-end;
+                        
+                        nav {
+                            display: flex;
+                            flex-direction: column;
+                            
+                            a {
+                                margin-bottom: .5rem;                            
+                            }
+                        }
+                    }
+                }
+
+                .right-content-information {
+                    height: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    align-self: center;
+
+                    .information-image-number {
+                        position: relative;
+                        left: -10rem;
+
+                        .image-actual-number {
+                            width: 10rem;
+                            height: 10rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: #3498db;
+                            position: relative;
+                        }
+
+                        .image-remain-number {
+                            position: absolute;
+                            margin-top: 1rem;
+                            right: 0;
+                        }
+
+                    }
+                    .information-image-seperator {
+                        width: 10rem;
+                        height: 2px;
+                        background: $mo-white;
+                        position: relative;
+                        left: -8rem;
+                    }                    
+
+                    .information-image {
+                        width: 16rem;
+                        height: 16rem;
+                        background: url(https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd7421500ebb37b5081ae17c3b77a8f4&auto=format&fit=crop&w=1950&q=80) center center / cover no-repeat;
+                        position: relative;
+                        right: -4rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .right-content-list {
+                    height: 20%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: $mo-white;
+                    position: relative;
+                    left: 1rem;
+
+                    li {
+                        color: #ccc;
+                    }
+                }
+            }
+
+            .right-footer {
+                height: 10%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: burlywood;
+
+                    .footer-content {
+                        width: 80%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .right-footer-icon {
+                        width: 18px;
+                        height: 18px;
+                        background: $mo-white;
+                    }
+                }
+        
+            }
+    
+        }
+    }
